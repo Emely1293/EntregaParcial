@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        aside {
+            width: 18%;
+            background-color: white;
+            padding: 20px;
+        }
+
+        aside.right {
+            width: 18%;
+            background-color: lightgray;
+        }
+
+        main {
+            flex-grow: 1;
+            width: 64%;
+            padding: 20px;
+            display: flex; /* Hacer que el main sea un flex container */
+        }
+
+        hr {
+            border: 1px solid lightgray;
+            margin-top: 10px;
+        }
+
+        .weather-icon {
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        .section-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .section {
+            width: 17%;
+            border: 1px solid lightgray;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .right .section {
+            background-color: white;
+        }
+
+        .image-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .red-text {
+            color: red;
+            text-transform: uppercase;
+        }
+
+        .main-div {
+            display: flex;
+            flex-direction: row;
+            background-color: #990000;
+            color: white;
+        }
+
+        .main-left {
+            width: 20%;
+            padding: 5px;
+        }
+
+        .main-right {
+            width: 80%;
+            padding: 2px;
+        }
+        .navbar-blue {
+            background-color: #003366;
+            overflow: hidden;
+        }
+
+        .navbar-blue a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .navbar-blue a:hover {
+            background-color: #3399CC;
+            color: black;
+        }
+
+        .dropdown-blue {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown-blue .dropbtn {
+            font-size: 18px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 16px 20px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar-blue a:hover, .dropdown-blue:hover .dropbtn {
+            background-color: #3399CC;
+            color: black;
+        }
+
+        .dropdown-content-blue {
+            display: none;
+            position: absolute;
+            background-color: #003366;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content-blue a {
+            float: none;
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content-blue a:hover {
+            background-color: #3399CC;
+            color: black;
+        }
+
+        .dropdown-blue:hover .dropdown-content-blue {
+            display: block;
+        }
+
+
+        .navbar-white {
+            background-color: white;
+            overflow: hidden;
+        }
+
+        .navbar-white a {
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 16px 20px;
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        .navbar-white a:hover {
+            background-color: lightgray;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar-blue">
+        <a href="#">News</a>
+        <a href="#">Opinion</a>
+        <a href="#">Sport</a>
+        <a href="#">Culture</a>
+        <a href="#">Lifestyle</a>
+        <div class="dropdown-blue">
+            <button class="dropbtn">More 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content-blue">
+                <a href="#">Clima</a>
+                <a href="#">Tecnología</a>
+                <a href="#">Entretenimiento</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="navbar-white">
+        <a href="#">WORLD</a>
+        <a href="#">UK</a>
+        <a href="#">Climate Crisis</a>
+        <a href="#">Environment</a>
+        <a href="#">Science</a>
+        <a href="#">Global development</a>
+        <a href="#">Football</a>
+        <a href="#">Tech</a>
+        <a href="#">Business</a>
+        <a href="#">Obituaries</a>
+    </div>
+
+<div class="container">
+    <aside>
+        <h2>HEADLINES</h2>
+        <form action="#">
+            <input type="text" placeholder="Buscar..." name="search">
+            <button type="submit">Buscar</button>
+        </form>
+        <hr>
+        <img class="weather-icon" src="https://cdn.icon-icons.com/icons2/3191/PNG/512/sunny_sun_cloud_weather_cloudy_icon_194237.png" alt="Icono del clima">
+        <span>35 Celsius</span>
+        <hr>
+        <div class="section-container">
+            <div class="section">12:30
+                <div><img src="https://images.vexels.com/media/users/3/154381/isolated/preview/95b254d1474b9a7c25e60536f82398a1-icono-de-trazo-de-clima-nublado.png" alt="" width="20px" height="20px"></div>
+                <p><strong>27 Celsius</strong></p>
+            </div>
+
+            <div class="section">16:45
+                <div><img src="https://images.vexels.com/media/users/3/154381/isolated/preview/95b254d1474b9a7c25e60536f82398a1-icono-de-trazo-de-clima-nublado.png" alt="" width="20px" height="20px"></div>
+                <p><strong>27 Celsius</strong></p>
+            </div>
+
+            <div class="section">08:15
+                <div><img src="https://images.vexels.com/media/users/3/154381/isolated/preview/95b254d1474b9a7c25e60536f82398a1-icono-de-trazo-de-clima-nublado.png" alt="" height="20px" width="20px"></div>
+                <p><strong>27 Celsius</strong></p>
+            </div>
+
+            <div class="section">20:00
+                <div><img src="https://images.vexels.com/media/users/3/154381/isolated/preview/95b254d1474b9a7c25e60536f82398a1-icono-de-trazo-de-clima-nublado.png" alt="" width="20px" height="20px"></div>
+                <p><strong>27 Celsius</strong></p>
+            </div>
+        </div>
+        <img class="weather-icon" src="https://cdn.icon-icons.com/icons2/1673/PNG/512/repeatoutline_110883.png" alt="Icono del clima">
+        <span><strong>View full forecast</strong></span>
+    </aside>
+    <main>
+        <div class="main-div">
+            <div class="main-left">
+                <H2>Zelenskiy calls for Russia to lose UN veto power; UN chief says 'humaity has opened gates of hell on climate'</H2>
+                <p>Este es el contenido del lado izquierdo con un 20% de ancho.</p>
+            </div>
+            <div class="main-right">
+                <img src="https://imagenes.elpais.com/resizer/o5eNwRkmdRxuE5xBvbtUmsDDVOg=/828x466/cloudfront-eu-central-1.images.arcpublishing.com/prisa/BIY3HSNWSNBX7NLJDGXATLFORA.JPG" alt="" width="800px" height="500px">
+            </div>
+        </div>
+    </main>
+    <aside class="right">
+        <div class="image-container">
+            <img src="https://www.infobae.com/new-resizer/ajYleYQagu0WQQaYXP0H0nipB8E=/992x661/filters:format(webp):quality(85)/cloudfront-us-east-1.images.arcpublishing.com/infobae/GXY3TPQPDUZ3Q45PE5IXOAZUCU.jpg" alt="Imagen que ocupa todo el aside derecho" width="330px" height="200px">
+            <div class="red-text">INDIA</div>
+            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec semper justo. Cras bibendum malesuada sollicitudin. Nullam nec semper justo. Cras bibendum malesuada sollicitudin.</h3>
+            <div class="separador"></div>
+            <br>
+            <div class="red-text">SPAIN</div>
+            <div>
+                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec semper justo. Cras bibendum malesuada sollicitudin. Nullam nec semper justo. Cras bibendum malesuada sollicitudin.</h4>
+            </div>
+            <br>
+            <div class="red-text">Breastfeeding</div>
+            <div>
+                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec semper justo. Cras bibendum malesuada sollicitudin. Nullam nec semper justo. Cras bibendum malesuada sollicitudin.</h4>
+            </div>
+            <br>
+            <div class="red-text">Exclusive</div>
+            <div>
+                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec semper justo. Cras bibendum malesuada sollicitudin. Nullam nec semper justo. Cras bibendum malesuada sollicitudin.</h4>
+            </div>
+            <br>
+            <div class="red-text">King Charles III</div>
+            <div>
+                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec semper justo. Cras bibendum malesuada sollicitudin. Nullam nec semper justo. Cras bibendum malesuada sollicitudin.</h4>
+            </div>
+            <br>
+            <div class="red-text">CHINA</div>
+            <div>
+                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec semper justo. Cras bibendum malesuada sollicitudin. Nullam nec semper justo. Cras bibendum malesuada sollicitudin.</h4>
+            </div>
+        </div>
+    </aside>
+</div>
+
+<!-- Nuevo div dividido en 3 partes -->
+<div class="main-div" style="background-color: #990000; color: white;">
+    <div class="main-left">
+        <H2>Sección 1</H2>
+        <p>Este es el contenido de la Sección 1.</p>
+    </div>
+    <div class="main-left">
+        <H2>Sección 2</H2>
+        <p>Este es el contenido de la Sección 2.</p>
+    </div>
+    <div class="main-left">
+        <H2>Sección 3</H2>
+        <p>Este es el contenido de la Sección 3.</p>
+    </div>
+</div>
+
+</body>
+</html>
